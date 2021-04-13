@@ -52,10 +52,13 @@ function App() {
     })
 
     setUsers([...users, user])
-    // setUsers(users.concat(user))
 
-    console.log(nextId.current)  //4
+    console.log(nextId.current)
     nextId.current += 1
+  }
+
+  const onRemove = id => {
+    setUsers(users.filter(user => user.id !== id))
   }
 
   return (
@@ -66,7 +69,10 @@ function App() {
         onChange = {onChange}
         onCreate = {onCreate}
       />
-      <UserList users = {users}/>
+      <UserList 
+        users = {users}
+        onRemove = {onRemove}
+      />
     </>
   );
 }
