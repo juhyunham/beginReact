@@ -8,25 +8,7 @@ function User ({ user }) {
     );
 }
 
-function UserList () {
-    const users = [
-        {
-            id: 1,
-            username: `juham`,
-            email: `juham@ebay.com`
-        },
-        {
-            id: 2,
-            username: `hamju`,
-            email: `hamju@gmail.com`
-        },
-        {
-            id: 3,
-            username: `juhyun`,
-            email: `juhyun@gmail.com`
-        }
-    ]
-
+function UserList ({ users }) {
     return (
         <div>
             {users.map(user => (
@@ -36,4 +18,4 @@ function UserList () {
     )
 }
 
-export default UserList;
+export default UserList
